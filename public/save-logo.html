@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Save Logo Image</title>
+        <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    .logo-container {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .logo {
+      width: 200px;
+      height: 200px;
+    }
+    .instructions {
+      background-color: #f8f9fa;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .instructions ol {
+      padding-left: 25px;
+    }
+    code {
+      background-color: #eee;
+      padding: 2px 5px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+  </style>
+    </head>
+    <body>
+        <h1>Save the Logo for Your Portfolio</h1>
+
+        <div class="instructions">
+            <h2>Instructions</h2>
+            <ol>
+                <li>Right-click on the logo image below</li>
+                <li>Select "Save image as..." from the context menu</li>
+                <li>Save the file as <code>logo.png</code> in your project's
+                    <code>public/images</code> folder</li>
+                <li>After saving, you can delete this HTML file</li>
+            </ol>
+        </div>
+
+        <div class="logo-container">
+            <svg class="logo" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 200 200">
+                <!-- Blue shield with white square and chevron -->
+                <path fill="#4169e1"
+                    d="M100,15 L180,55 L180,125 C180,154.6 156.1,180.7 100,185 C43.9,180.7 20,154.6 20,125 L20,55 L100,15z" />
+                <rect fill="white" x="85" y="60" width="30" height="30" />
+                <path fill="white"
+                    d="M70,100 L100,130 L130,100 L100,120 L70,100z" />
+            </svg>
+
+            <p><strong>Right-click and save this image as logo.png</strong></p>
+        </div>
+
+        <h2>Alternative Methods</h2>
+        <p>If you have the original logo image file:</p>
+        <ul>
+            <li>Simply rename it to <code>logo.png</code> and place it in your
+                project's <code>public/images</code> directory</li>
+        </ul>
+
+        <p>Once the logo is in place, your portfolio website will automatically
+            use it.</p>
+    </body>
+</html>
