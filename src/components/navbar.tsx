@@ -81,7 +81,7 @@ export function Navbar() {
             }}
           >
             <Image
-              src="/images/logo.svg"
+              src={`${basePath}/images/logo.svg`}
               alt="Portfolio Logo"
               fill
               className="object-contain"

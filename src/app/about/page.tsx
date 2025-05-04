@@ -6,6 +6,9 @@ import Image from "next/image";
 import { User, Briefcase, GraduationCap, BookOpen, Award } from "lucide-react";
 
 export default function AboutPage() {
+  // Get the base path from the environment or use empty string for development
+  const basePath = process.env.NODE_ENV === "production" ? "/MyPortfolio" : "";
+
   return (
     <div className="relative">
       <GearBackground />
@@ -182,7 +185,7 @@ export default function AboutPage() {
               <div className="md:w-1/3 mb-6 md:mb-0">
                 <div className="relative w-full aspect-square md:h-80 rounded-lg overflow-hidden">
                   <Image
-                    src="/images/graduation.jpg"
+                    src={`${basePath}/images/graduation.jpg`}
                     alt="Graduation Photo"
                     fill
                     className="object-cover"
