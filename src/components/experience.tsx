@@ -26,7 +26,7 @@ const experiences = [
   },
   {
     title: "Jr. Database and Data Analyst",
-    company: "Skybus BD Ltd",
+    company: "Skylux BD Ltd"
     location:
       "Sister concern of Universal Perfumes and Cosmetics, House-21, Road-5, Sector-11, Uttara",
     period: "February 2023 - April 2024",
