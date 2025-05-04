@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 
 export function Contact() {
   return (
@@ -56,12 +56,45 @@ export function Contact() {
             </div>
             <div>
               <h3 className="font-medium">Phone</h3>
-              <a
-                href="tel:+8801867707331"
-                className="text-muted-foreground hover:text-primary"
-              >
-                +880 1867707331
-              </a>
+              <div className="flex flex-col">
+                <a
+                  href="tel:+8801867707331"
+                  className="text-muted-foreground hover:text-primary"
+                >
+                  +880 1867707331
+                </a>
+                <a
+                  href="tel:+8801780662278"
+                  className="text-muted-foreground hover:text-primary mt-1"
+                >
+                  +880 1780662278
+                </a>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.25 }}
+            viewport={{ once: true }}
+            className="flex items-start gap-4 p-4 backdrop-blur-sm bg-card/30 rounded-lg"
+          >
+            <div className="rounded-full bg-green-500 p-3 text-white">
+              <MessageCircle className="h-5 w-5" />
+            </div>
+            <div>
+              <h3 className="font-medium">WhatsApp</h3>
+              <div className="flex flex-col">
+                <a
+                  href="https://wa.me/8801867707331"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-green-500"
+                >
+                  +880 1867707331
+                </a>
+              </div>
             </div>
           </motion.div>
 
@@ -78,7 +111,7 @@ export function Contact() {
             <div>
               <h3 className="font-medium">Location</h3>
               <p className="text-muted-foreground">
-                Muslim Modern Road, Mirpur-14, Dhaka
+                Uttor Kafrul, Mirpur-14, Dhaka
               </p>
             </div>
           </motion.div>

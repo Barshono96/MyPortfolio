@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Github, Twitter, Linkedin } from "lucide-react";
+import { ArrowRight, Github, Twitter, Linkedin, Facebook } from "lucide-react";
 
 export function Hero() {
   return (
@@ -67,7 +67,12 @@ export function Hero() {
             className="group flex items-center gap-2 rounded-full gradient-bg-1 px-6 py-3 text-sm font-medium text-white hover:opacity-90 transition-opacity"
           >
             View My Projects
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            <motion.div
+              whileHover={{ rotate: 360 }}
+              transition={{ duration: 0.6, ease: "easeInOut" }}
+            >
+              <ArrowRight className="h-4 w-4" />
+            </motion.div>
           </Link>
 
           <div className="flex gap-4">
@@ -76,24 +81,41 @@ export function Hero() {
               target="_blank"
               className="rounded-full gradient-bg-2 p-3 text-white hover:opacity-90 transition-opacity"
             >
-              <Github className="h-5 w-5" />
+              <motion.div
+                whileHover={{ rotate: 360 }}
+                transition={{ duration: 0.6, ease: "easeInOut" }}
+              >
+                <Github className="h-5 w-5" />
+              </motion.div>
               <span className="sr-only">GitHub</span>
             </Link>
+
             <Link
-              href="https://twitter.com"
-              target="_blank"
-              className="rounded-full bg-primary p-3 text-primary-foreground hover:opacity-90 transition-opacity"
-            >
-              <Twitter className="h-5 w-5" />
-              <span className="sr-only">Twitter</span>
-            </Link>
-            <Link
-              href="https://linkedin.com/in/shifaeta-kadari-barshon"
+              href="https://www.linkedin.com/in/shifaeta-kadari-barshon-6088b5180/"
               target="_blank"
               className="rounded-full bg-accent p-3 text-accent-foreground hover:opacity-90 transition-opacity"
             >
-              <Linkedin className="h-5 w-5" />
+              <motion.div
+                whileHover={{ rotate: 360 }}
+                transition={{ duration: 0.6, ease: "easeInOut" }}
+              >
+                <Linkedin className="h-5 w-5" />
+              </motion.div>
               <span className="sr-only">LinkedIn</span>
+            </Link>
+
+            <Link
+              href="https://www.facebook.com/shifat.barshon.9/"
+              target="_blank"
+              className="rounded-full bg-primary p-3 text-primary-foreground hover:opacity-90 transition-opacity"
+            >
+              <motion.div
+                whileHover={{ rotate: 360 }}
+                transition={{ duration: 0.6, ease: "easeInOut" }}
+              >
+                <Facebook className="h-5 w-5" />
+              </motion.div>
+              <span className="sr-only">Facebook</span>
             </Link>
           </div>
         </motion.div>

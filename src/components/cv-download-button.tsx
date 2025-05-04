@@ -15,13 +15,13 @@ export function CVDownloadButton({
     <Link
       href="/files/Shifaeta_Kadari_Personal__CV.pdf"
       download
-      className={`group flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-all ${
+      className={`group flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-all duration-300 ${
         variant === "gradient"
-          ? "gradient-bg-1 text-white hover:opacity-90"
-          : "border border-border hover:border-primary hover:text-primary"
+          ? "gradient-bg-1 text-white shadow-sm hover:shadow-md hover:opacity-90 hover:scale-105"
+          : "border border-border/50 hover:border-cyan-400/30 hover:bg-transparent hover:text-cyan-500 hover:scale-105 hover:shadow-sm"
       }`}
     >
-      <div className="relative h-5 w-5 overflow-hidden">
+      <div className="relative h-5 w-5 overflow-hidden group-hover:rotate-6 transition-transform duration-300">
         <Image
           src="/images/logo.svg"
           alt="Logo"
@@ -31,7 +31,7 @@ export function CVDownloadButton({
         />
       </div>
       Download CV
-      <Download className="h-4 w-4 transition-transform group-hover:translate-y-1" />
+      <Download className="h-4 w-4 transition-all duration-300 group-hover:translate-y-1 group-hover:text-cyan-400" />
     </Link>
   );
 }

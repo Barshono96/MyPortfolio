@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 
 export default function ContactPage() {
   const contactItems = [
@@ -23,14 +23,47 @@ export default function ContactPage() {
       icon: <Phone className="h-5 w-5" />,
       title: "Phone",
       content: (
-        <a
-          href="tel:+8801867707331"
-          className="text-muted-foreground hover:text-primary transition-colors"
-        >
-          +880 1867707331
-        </a>
+        <div className="flex flex-col">
+          <a
+            href="tel:+8801867707331"
+            className="text-muted-foreground hover:text-primary transition-colors"
+          >
+            +880 1867707331
+          </a>
+          <a
+            href="tel:+8801780662278"
+            className="text-muted-foreground hover:text-primary transition-colors mt-1"
+          >
+            +880 1780662278
+          </a>
+        </div>
       ),
       gradient: "gradient-bg-2",
+    },
+    {
+      icon: <MessageCircle className="h-5 w-5" />,
+      title: "WhatsApp",
+      content: (
+        <div className="flex flex-col">
+          <a
+            href="https://wa.me/8801867707331"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-green-500 transition-colors"
+          >
+            +880 1867707331
+          </a>
+          <a
+            href="https://wa.me/8801780662278"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-green-500 transition-colors mt-1"
+          >
+            +880 1780662278
+          </a>
+        </div>
+      ),
+      gradient: "bg-green-500",
     },
     {
       icon: <MapPin className="h-5 w-5" />,

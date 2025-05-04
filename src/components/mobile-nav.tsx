@@ -77,10 +77,14 @@ export function MobileNav() {
     <div className="md:hidden">
       <button
         onClick={toggleMenu}
-        className="flex items-center justify-center p-2 rounded-md text-foreground"
+        className="flex items-center justify-center p-2 rounded-full text-foreground hover:bg-transparent hover:border hover:border-cyan-400/30 hover:scale-110 transition-all duration-300"
         aria-label="Toggle menu"
       >
-        {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        {isOpen ? (
+          <X className="h-6 w-6 animate-in zoom-in-50 duration-300" />
+        ) : (
+          <Menu className="h-6 w-6 animate-in zoom-in-50 duration-300" />
+        )}
       </button>
 
       <AnimatePresence>
@@ -111,10 +115,10 @@ export function MobileNav() {
                             closeMenu();
                           }
                         }}
-                        className={`block px-4 py-2 text-base font-medium rounded-md ${
+                        className={`block px-4 py-2.5 text-base font-medium rounded-full transition-all duration-300 ${
                           isActive
-                            ? "bg-primary/10 text-primary"
-                            : "text-muted-foreground hover:text-foreground"
+                            ? "bg-transparent border border-cyan-400/40 text-cyan-500 scale-105 shadow-sm backdrop-blur-sm"
+                            : "text-muted-foreground hover:text-foreground hover:bg-transparent hover:border hover:border-cyan-400/30 hover:scale-105 hover:shadow-sm"
                         }`}
                       >
                         {item.name}
@@ -127,10 +131,10 @@ export function MobileNav() {
                     href="/files/Shifaeta_Kadari_Personal__CV.pdf"
                     download="Shifaeta_Kadari_CV.pdf"
                     onClick={closeMenu}
-                    className="block px-4 py-2 text-base font-medium text-muted-foreground hover:text-foreground rounded-md"
+                    className="block px-4 py-2.5 text-base font-medium text-muted-foreground hover:text-cyan-500 hover:bg-transparent hover:border hover:border-cyan-400/30 hover:scale-105 hover:shadow-sm rounded-full transition-all duration-300"
                   >
                     <div className="flex items-center gap-2">
-                      <div className="relative h-5 w-5 overflow-hidden">
+                      <div className="relative h-5 w-5 overflow-hidden group-hover:rotate-6 transition-transform duration-300">
                         <Image
                           src="/images/logo.svg"
                           alt="Logo"
@@ -142,6 +146,15 @@ export function MobileNav() {
                       Download CV
                     </div>
                   </a>
+                </li>
+                <li className="pt-2">
+                  <Link
+                    href="/about"
+                    onClick={closeMenu}
+                    className="block px-4 py-2.5 text-base font-medium text-white bg-gradient-to-r from-sky-400 to-indigo-300 hover:from-sky-300 hover:to-indigo-200 rounded-full transition-all duration-300"
+                  >
+                    Let's Talk
+                  </Link>
                 </li>
               </ul>
             </nav>
