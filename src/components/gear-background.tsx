@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import React from "react";
 import { useTheme } from "next-themes";
 
 interface Gear {
@@ -20,10 +20,10 @@ interface Connection {
 }
 
 export function GearBackground() {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const canvasRef = React.useRef<HTMLCanvasElement>(null);
   const { theme, systemTheme } = useTheme();
 
-  useEffect(() => {
+  React.useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -360,7 +360,7 @@ export function GearBackground() {
       window.removeEventListener("resize", resizeCanvas);
       cancelAnimationFrame(animationFrame);
     };
-  }, []);
+  }, [theme, systemTheme]);
 
   return (
     <>

@@ -148,7 +148,7 @@ export function Navbar() {
             href="/about"
             className="hidden rounded-full bg-gradient-to-r from-sky-400 to-indigo-300 px-4 py-2 text-sm font-medium text-white shadow-sm hover:shadow-md hover:from-sky-300 hover:to-indigo-200 hover:scale-105 transition-all duration-300 md:block"
           >
-            Let's Talk
+            Let's Talk About Me
           </Link>
 
           <MobileNav />

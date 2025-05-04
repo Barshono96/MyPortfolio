@@ -1,11 +1,13 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import React from "react";
+
+type Point = { x: number; y: number };
 
 export function TechCircuitBackground() {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const canvasRef = React.useRef<HTMLCanvasElement>(null);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -196,7 +198,7 @@ export function TechCircuitBackground() {
       const centerY = canvas.height / 2;
 
       // Lines radiating from center
-      const lineEndpoints = [];
+      const lineEndpoints: Point[] = [];
       const numLines = 12;
 
       for (let i = 0; i < numLines; i++) {

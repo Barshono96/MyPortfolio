@@ -8,7 +8,7 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
-import { useState, useRef, useEffect } from "react";
+import React from "react";
 
 const experiences = [
   {
@@ -38,12 +38,12 @@ const experiences = [
 ];
 
 export function Experience() {
-  const carouselRef = useRef<HTMLDivElement>(null);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [cardsPerView, setCardsPerView] = useState(1);
+  const carouselRef = React.useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = React.useState(0);
+  const [cardsPerView, setCardsPerView] = React.useState(1);
 
   // Update cards per view based on screen size
-  useEffect(() => {
+  React.useEffect(() => {
     const updateCardsPerView = () => {
       if (window.innerWidth >= 1200) {
         setCardsPerView(1); // Show 1 card on larger screens for full detail view
@@ -90,7 +90,7 @@ export function Experience() {
     }
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
     const carouselElement = carouselRef.current;
     if (carouselElement) {
       carouselElement.addEventListener("scroll", handleScroll);

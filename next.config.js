@@ -5,9 +5,14 @@ const nextConfig = {
     unoptimized: true,
   },
   output: "export",
-  basePath: "/MyPortfolio",
-  assetPrefix: "/MyPortfolio",
-  trailingSlash: true,
 };
+
+// Add GitHub Pages settings only when not in development
+const isGithubActions = process.env.GITHUB_ACTIONS === "true";
+if (isGithubActions) {
+  nextConfig.basePath = "/MyPortfolio";
+  nextConfig.assetPrefix = "/MyPortfolio";
+  nextConfig.trailingSlash = true;
+}
 
 module.exports = nextConfig;
