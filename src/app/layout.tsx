@@ -7,8 +7,23 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
-  description: "A professional portfolio website built with Next.js",
+  title: "Shifaeta Kadari Barshon | Software Engineer",
+  description:
+    "Portfolio of Shifaeta Kadari Barshon, a Full-Stack Software Engineer specializing in web development",
+  icons: {
+    icon: [
+      { url: "/favicon/favicon.svg", type: "image/svg+xml" },
+      { url: "/images/logo.svg" },
+    ],
+    shortcut: { url: "/favicon/favicon.svg", type: "image/svg+xml" },
+    apple: { url: "/images/logo.svg" },
+  },
+  manifest: "/manifest.json",
+  metadataBase: new URL(
+    process.env.NODE_ENV === "production"
+      ? "https://barshono96.github.io/MyPortfolio"
+      : "http://localhost:3000"
+  ),
 };
 
 export default function RootLayout({
@@ -18,6 +33,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml" />
+        <link
+          rel="shortcut icon"
+          href="/favicon/favicon.svg"
+          type="image/svg+xml"
+        />
+        <link rel="apple-touch-icon" href="/images/logo.svg" />
+      </head>
       <body className={inter.className}>
         <Navbar />
         {children}

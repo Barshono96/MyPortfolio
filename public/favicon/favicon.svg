@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Blue shield with white square and chevron -->
+  <path fill="#4169e1" d="M100,15 L180,55 L180,125 C180,154.6 156.1,180.7 100,185 C43.9,180.7 20,154.6 20,125 L20,55 L100,15z"/>
+  <rect fill="white" x="85" y="60" width="30" height="30"/>
+  <path fill="white" d="M70,100 L100,130 L130,100 L100,120 L70,100z"/>
+</svg> 
