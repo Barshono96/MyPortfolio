@@ -6,6 +6,9 @@ import Link from "next/link";
 import { ArrowRight, Github, Twitter, Linkedin, Facebook } from "lucide-react";
 
 export function Hero() {
+  // Get the base path from the environment or use empty string for development
+  const basePath = process.env.NODE_ENV === "production" ? "/MyPortfolio" : "";
+
   return (
     <section id="hero" className="container py-24 md:py-32 relative">
       <motion.div
@@ -24,7 +27,7 @@ export function Hero() {
               className="relative h-16 w-16"
             >
               <Image
-                src="/images/logo.svg"
+                src={`${basePath}/images/logo.svg`}
                 alt="Portfolio Logo"
                 fill
                 className="object-contain"
