@@ -51,6 +51,21 @@ export function MobileNav() {
     };
   }, [pathname]);
 
+  // Add scroll event listener to close menu on scroll
+  React.useEffect(() => {
+    if (!isOpen) return;
+
+    const handleScroll = () => {
+      closeMenu();
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isOpen]);
+
   // Function to handle smooth scrolling for section links
   const handleNavClick = (e: any, href: string) => {
     // Only handle links with hash for section scrolling
@@ -79,7 +94,7 @@ export function MobileNav() {
     <div className="md:hidden">
       <button
         onClick={toggleMenu}
-        className="flex items-center justify-center p-2 rounded-full text-foreground hover:bg-transparent hover:border hover:border-cyan-400/30 hover:scale-110 transition-all duration-300"
+        className="flex items-center justify-center p-2 rounded-full bg-gradient-to-r from-cyan-400 to-indigo-400 text-white shadow-md hover:shadow-cyan-500/20 hover:from-cyan-500 hover:to-indigo-500 hover:scale-110 transition-all duration-300"
         aria-label="Toggle menu"
       >
         {isOpen ? (
@@ -119,8 +134,8 @@ export function MobileNav() {
                         }}
                         className={`block px-4 py-2.5 text-base font-medium rounded-full transition-all duration-300 ${
                           isActive
-                            ? "bg-transparent border border-cyan-400/40 text-cyan-500 scale-105 shadow-sm backdrop-blur-sm"
-                            : "text-muted-foreground hover:text-foreground hover:bg-transparent hover:border hover:border-cyan-400/30 hover:scale-105 hover:shadow-sm"
+                            ? "bg-gradient-to-r from-cyan-500/70 to-indigo-500/70 border border-cyan-400/40 text-white scale-105 shadow-md shadow-cyan-500/20 backdrop-blur-sm"
+                            : "text-foreground hover:bg-gradient-to-r hover:from-cyan-500/40 hover:to-indigo-500/40 hover:text-white hover:border hover:border-cyan-400/30 hover:scale-105 hover:shadow-md hover:shadow-cyan-500/10"
                         }`}
                       >
                         {item.name}
@@ -133,7 +148,7 @@ export function MobileNav() {
                     href={`${basePath}/files/Shifaeta_Kadari_Personal__CV.pdf`}
                     download="Shifaeta_Kadari_CV.pdf"
                     onClick={closeMenu}
-                    className="block px-4 py-2.5 text-base font-medium text-muted-foreground hover:text-cyan-500 hover:bg-transparent hover:border hover:border-cyan-400/30 hover:scale-105 hover:shadow-sm rounded-full transition-all duration-300"
+                    className="block px-4 py-2.5 text-base font-medium bg-gradient-to-r from-emerald-500/70 to-cyan-500/70 text-white border border-emerald-400/30 shadow-md shadow-emerald-500/20 hover:from-emerald-600/70 hover:to-cyan-600/70 hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/30 rounded-full transition-all duration-300"
                   >
                     <div className="flex items-center gap-2">
                       <div className="relative h-5 w-5 overflow-hidden group-hover:rotate-6 transition-transform duration-300">
@@ -153,9 +168,9 @@ export function MobileNav() {
                   <Link
                     href="/about"
                     onClick={closeMenu}
-                    className="block px-4 py-2.5 text-base font-medium text-white bg-gradient-to-r from-sky-400 to-indigo-300 hover:from-sky-300 hover:to-indigo-200 rounded-full transition-all duration-300"
+                    className="block px-4 py-2.5 text-base font-medium text-white bg-gradient-to-r from-sky-500 to-indigo-500 border border-sky-400/30 rounded-full shadow-md shadow-indigo-500/20 hover:from-sky-600 hover:to-indigo-600 hover:shadow-lg hover:shadow-indigo-500/30 hover:scale-105 transition-all duration-300"
                   >
-                    Let's Talk
+                    Let's Talk About Me
                   </Link>
                 </li>
               </ul>
