@@ -19,6 +19,8 @@ const navItems = [
 export function Navbar() {
   const pathname = usePathname();
   const [activeSection, setActiveSection] = React.useState("");
+  // Get the base path from the environment or use empty string for development
+  const basePath = process.env.NODE_ENV === "production" ? "/MyPortfolio" : "";
 
   // Listen for section change events from the ScrollSpy component
   React.useEffect(() => {
@@ -136,7 +138,7 @@ export function Navbar() {
         </nav>
         <div className="flex items-center gap-2">
           <a
-            href="/files/Shifaeta_Kadari_Personal__CV.pdf"
+            href={`${basePath}/files/Shifaeta_Kadari_Personal__CV.pdf`}
             download="Shifaeta_Kadari_CV.pdf"
             className="group flex items-center gap-1.5 text-sm font-medium px-3 py-1.5 rounded-full border border-border/50 text-muted-foreground hover:text-cyan-400 hover:border-cyan-400/30 hover:bg-transparent hover:scale-105 hover:shadow-sm transition-all duration-300"
           >

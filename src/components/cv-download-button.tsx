@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Download } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 interface CVDownloadButtonProps {
   variant?: "gradient" | "outline";
@@ -11,9 +12,12 @@ interface CVDownloadButtonProps {
 export function CVDownloadButton({
   variant = "outline",
 }: CVDownloadButtonProps) {
+  // Get the base path from the environment or use empty string for development
+  const basePath = process.env.NODE_ENV === "production" ? "/MyPortfolio" : "";
+
   return (
     <Link
-      href="/files/Shifaeta_Kadari_Personal__CV.pdf"
+      href={`${basePath}/files/Shifaeta_Kadari_Personal__CV.pdf`}
       download
       className={`group flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-all duration-300 ${
         variant === "gradient"
@@ -23,7 +27,7 @@ export function CVDownloadButton({
     >
       <div className="relative h-5 w-5 overflow-hidden group-hover:rotate-6 transition-transform duration-300">
         <Image
-          src="/images/logo.svg"
+          src={`${basePath}/images/logo.svg`}
           alt="Logo"
           fill
           className="object-contain"
