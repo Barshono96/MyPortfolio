@@ -66,7 +66,7 @@ export function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-gradient-to-b from-gray-900 to-gray-950 md:bg-background/80 md:backdrop-blur md:supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <motion.div
@@ -140,15 +140,15 @@ export function Navbar() {
           <a
             href={`${basePath}/files/Shifaeta_Kadari_Personal__CV.pdf`}
             download="Shifaeta_Kadari_CV.pdf"
-            className="group flex items-center gap-1.5 text-sm font-medium px-3 py-1.5 rounded-full border border-border/50 text-muted-foreground hover:text-cyan-400 hover:border-cyan-400/30 hover:bg-transparent hover:scale-105 hover:shadow-sm transition-all duration-300"
+            className="group flex items-center gap-1.5 text-sm font-medium px-3 py-1.5 rounded-full bg-transparent border border-cyan-400/30 text-cyan-300/80 hover:text-cyan-300 hover:border-cyan-400/50 hover:bg-cyan-900/20 hover:scale-105 hover:shadow-[0_0_10px_rgba(6,182,212,0.15)] transition-all duration-300"
           >
-            <FileText className="h-4 w-4 group-hover:rotate-6 group-hover:text-cyan-400 transition-transform duration-300" />
+            <FileText className="h-4 w-4 text-cyan-400/70 group-hover:rotate-6 group-hover:text-cyan-400 transition-transform duration-300" />
             Download CV
           </a>
 
           <Link
             href="/about"
-            className="hidden rounded-full bg-gradient-to-r from-sky-400 to-indigo-300 px-4 py-2 text-sm font-medium text-white shadow-sm hover:shadow-md hover:from-sky-300 hover:to-indigo-200 hover:scale-105 transition-all duration-300 md:block"
+            className="hidden rounded-full bg-transparent border border-indigo-400/30 px-4 py-2 text-sm font-medium text-indigo-300/80 shadow-sm hover:shadow-[0_0_15px_rgba(99,102,241,0.2)] hover:text-indigo-300 hover:border-indigo-400/50 hover:bg-indigo-900/20 hover:scale-105 transition-all duration-300 md:block"
           >
             Let's Talk About Me
           </Link>
