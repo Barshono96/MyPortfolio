@@ -204,14 +204,30 @@ export default function AboutPage() {
                   </h3>
                   <span className="text-sm text-white/70">2017 - 2022</span>
                 </div>
-                <p className="text-sm text-white/80 mb-4">
-                  United International University (138 credits)
-                </p>
+                <div className="mb-4 relative">
+                  <div className="inline-flex items-center justify-center">
+                    <span className="text-lg font-bold bg-gradient-to-r from-cyan-300 to-blue-300 text-transparent bg-clip-text px-2">
+                      United International University
+                    </span>
+                  </div>
+                  <div className="absolute -bottom-[2px] left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
+                </div>
+
+                <blockquote className="mb-4 pl-6 border-l-4 border-cyan-400 text-white bg-white/5 p-4 rounded-r-md shadow-[0_0_10px_rgba(34,211,238,0.2)] relative">
+                  <span className="text-cyan-400 absolute top-1 left-2 text-3xl">
+                    "
+                  </span>
+                  <p className="italic text-lg font-medium leading-relaxed">
+                    These four years were some of the best of my life. I learned
+                    so much, faced my share of challenges, but above all, I
+                    cherished every moment and enjoyed the journey.
+                  </p>
+                  <span className="text-cyan-400 absolute bottom-1 right-2 text-3xl">
+                    "
+                  </span>
+                </blockquote>
 
                 <ul className="text-sm text-white/80 space-y-2 pl-4">
-                  <li className="relative before:content-['•'] before:absolute before:left-[-1em] before:text-primary">
-                    CGPA: 2.76/4.00 (78% marks)
-                  </li>
                   <li className="relative before:content-['•'] before:absolute before:left-[-1em] before:text-primary">
                     Coursework: Data Structure, Algorithms, AI, Database
                     Management, Simulation and Modeling, System Analysis and
@@ -246,12 +262,19 @@ export default function AboutPage() {
                 </h3>
                 <span className="text-sm text-white/70">2016</span>
               </div>
-              <p className="text-sm text-white/80 mb-2">
-                Cantonment Public School And College, BUSMS, Parbatipur
-              </p>
+
+              <div className="mb-4 relative">
+                <div className="inline-flex items-center justify-center">
+                  <span className="text-lg font-bold bg-gradient-to-r from-cyan-300 to-blue-300 text-transparent bg-clip-text px-2">
+                    Cantonment Public School And College, BUSMS, Parbatipur
+                  </span>
+                </div>
+                <div className="absolute -bottom-[2px] left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
+              </div>
+
               <ul className="text-xs text-white/70 space-y-2 pl-4">
                 <li className="relative before:content-['•'] before:absolute before:left-[-1em] before:text-primary">
-                  GPA: 5.00/5.00
+                  I have completed my HSC from here in science group.
                 </li>
                 <li className="relative before:content-['•'] before:absolute before:left-[-1em] before:text-primary">
                   Batch-16
@@ -271,12 +294,17 @@ export default function AboutPage() {
                 </h3>
                 <span className="text-sm text-white/70">2014</span>
               </div>
-              <p className="text-sm text-white/80 mb-2">
-                Cantonment Public School And College, BUSMS, Parbatipur
-              </p>
+              <div className="mb-4 relative">
+                <div className="inline-flex items-center justify-center">
+                  <span className="text-lg font-bold bg-gradient-to-r from-cyan-300 to-blue-300 text-transparent bg-clip-text px-2">
+                    Cantonment Public School And College, BUSMS, Parbatipur
+                  </span>
+                </div>
+                <div className="absolute -bottom-[2px] left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
+              </div>
               <ul className="text-xs text-white/70 space-y-2 pl-4">
                 <li className="relative before:content-['•'] before:absolute before:left-[-1em] before:text-primary">
-                  GPA: 5.00/5.00
+                  I have completed my SSC from here in science group.
                 </li>
                 <li className="relative before:content-['•'] before:absolute before:left-[-1em] before:text-primary">
                   Batch-14
