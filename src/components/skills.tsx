@@ -43,6 +43,7 @@ const skillCategories = [
     skills: [
       { name: "SQL (PostgreSQL)", icon: <Database className="h-4 w-4" /> },
       { name: "NoSQL (MongoDB)", icon: <Box className="h-4 w-4" /> },
+      { name: "Prisma (ORM)", icon: <FileCode className="h-4 w-4" /> },
     ],
     gradient: "from-purple-500/20 to-pink-500/20",
   },
@@ -53,6 +54,7 @@ const skillCategories = [
       { name: "React", icon: <Code className="h-4 w-4" /> },
       { name: "Next.js", icon: <FileCode className="h-4 w-4" /> },
       { name: "Node.js", icon: <Server className="h-4 w-4" /> },
+      { name: "NestJS", icon: <Server className="h-4 w-4" /> },
       { name: "Express", icon: <Workflow className="h-4 w-4" /> },
       { name: "Chakra UI", icon: <Layers className="h-4 w-4" /> },
       { name: "ShadCN UI", icon: <Layers className="h-4 w-4" /> },
@@ -69,6 +71,11 @@ const skillCategories = [
       { name: "Trello", icon: <Calendar className="h-4 w-4" /> },
       { name: "Postman", icon: <Server className="h-4 w-4" /> },
       { name: "LoadRunner", icon: <Bug className="h-4 w-4" /> },
+      { name: "Docker", icon: <Box className="h-4 w-4" /> },
+      {
+        name: "CI/CD (GitHub Actions)",
+        icon: <Workflow className="h-4 w-4" />,
+      },
     ],
     gradient: "from-orange-500/20 to-red-500/20",
   },

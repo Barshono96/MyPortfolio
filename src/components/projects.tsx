@@ -17,6 +17,25 @@ const projects = [
     backendLink: "https://github.com/Barshono96/Playtomic_Backend",
   },
   {
+    title: "BlainClothApp",
+    description: [
+      "Developed the backend using Node.js, NestJS, Prisma ORM, and PostgreSQL.",
+      "Integrated AI with a weather API to recommend outfits based on occasion, location, and temperature.",
+      "Built social features for sharing and engagement within the app.",
+    ],
+    tech: ["Node.js", "NestJS", "Prisma", "PostgreSQL", "AI/ML"],
+    backendLink: "https://github.com/backbencherstudio/Blain_clothApp",
+  },
+  {
+    title: "TopProczar",
+    description: [
+      "Contributed to the backend of a business management platform using Node.js, NestJS, Prisma ORM, and PostgreSQL.",
+      "Developed modules for eCommerce, CRM, HRM, POS, and Accounting to provide an all-in-one operational solution.",
+    ],
+    tech: ["Node.js", "NestJS", "Prisma", "PostgreSQL", "eCommerce"],
+    backendLink: "https://github.com/backbencherstudio/toppro_server",
+  },
+  {
     title: "Finance Tracker",
     description: [
       "Built a web app for tracking monthly finances with full CRUD functionality for income and expenses.",

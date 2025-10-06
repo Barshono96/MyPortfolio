@@ -12,26 +12,32 @@ import React from "react";
 
 const experiences = [
   {
+    title: "Jr. Backend Developer",
+    company: "Softvence Delta - Betopia Group",
+    location: "Plot 2-3, Joypurhat Tower, Main Road, Dhaka 1219",
+    period: "May 2025 - Present",
+    description: [
+      "Developing and maintaining backend services using Node.js, NestJS, Express.js, Prisma ORM, and PostgreSQL to ensure scalable and efficient system performance.",
+      "Designing and implementing RESTful APIs, optimizing database queries, and collaborating with cross-functional teams to deliver reliable, production-ready solutions.",
+    ],
+  },
+  {
     title: "Full-Stack Developer",
     company: "Project Code",
-    location: "House 90, Road 104, Gulshan 2, Dhaka 1212",
-    period: "May 2024 - Present",
+    location: "House 36, Road 104, Gulshan 2, Dhaka 1212",
+    period: "May 2024 - March 2025",
     description: [
-      "Successfully completed an intensive 12-week immersive bootcamp in full-stack development, in collaboration with Codeworks, Europe's best coding bootcamp.",
-      "Currently working as a developer, applying expertise in modern web technologies including JavaScript, React, Node.js, Express, MongoDB, and Git.",
-      "Contribute to production-level applications while collaborating in an agile development environment.",
-      "Implement responsive, user-friendly interfaces and robust backend solutions for diverse client projects.",
-      "Leverage strong software engineering foundations to deliver scalable, maintainable code following industry best practices.",
+      "Completed a 12-week full-stack bootcamp at Codeworks, gaining expertise in JavaScript, React, Node.js, Express, MongoDB, and Git.",
+      "Worked as a Full-Stack Developer, building and deploying applications in a collaborative environment.",
     ],
   },
   {
     title: "Jr. Database and Data Analyst",
-    company: "Skylux BD Ltd",
-    location:
-      "Sister concern of Universal Perfumes and Cosmetics, House-21, Road-5, Sector-11, Uttara",
-    period: "February 2023 - April 2024",
+    company: "Skylux BD Ltd (USA)",
+    location: "House-21, Road-5, Sector-11, Uttara",
+    period: "February 2023 - March 2024",
     description: [
-      "Performed database updates, ensuring data accuracy, and developed tools to validate functionality.",
+      "Performed database updates, ensuring data accuracy, and developed test cases to validate functionality.",
       "Identified and reported bugs, and conducted data entry and analysis to support business decisions.",
     ],
   },

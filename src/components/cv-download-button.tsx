@@ -17,7 +17,8 @@ export function CVDownloadButton({
 
   return (
     <Link
-      href={`${basePath}/files/Shifaeta_Kadari_Personal__CV.pdf`}
+      // href={`${basePath}/files/Shifaeta_Kadari_Personal__CV.pdf`}
+      href={`${basePath}/files/Shifaeta_Kadari_CV (L).pdf`}
       download
       className={`group flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-all duration-300 ${
         variant === "gradient"
