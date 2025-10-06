@@ -1,9 +1,8 @@
 "use client";
 
-import Link from "next/link";
+import React from "react";
 import Image from "next/image";
 import { Download } from "lucide-react";
-import { usePathname } from "next/navigation";
 
 interface CVDownloadButtonProps {
   variant?: "gradient" | "outline";
@@ -14,12 +13,17 @@ export function CVDownloadButton({
 }: CVDownloadButtonProps) {
   // Get the base path from the environment or use empty string for development
   const basePath = process.env.NODE_ENV === "production" ? "/MyPortfolio" : "";
+  // Point to the actual file present in public/files. Encode to avoid URL issues with spaces/parentheses.
+  // The public/files folder contains: Shifaeta_Kadari_CV(L).pdf
+  const fileName = "Shifaeta_Kadari_CV(L).pdf";
+  const href = encodeURI(`${basePath}/files/${fileName}`);
 
   return (
-    <Link
-      // href={`${basePath}/files/Shifaeta_Kadari_Personal__CV.pdf`}
-      href={`${basePath}/files/Shifaeta_Kadari_CV (L).pdf`}
-      download
+    <a
+      href={href}
+      // Explicitly set the downloaded filename so the saved file name matches expected
+      download={fileName}
+      aria-label="Download CV"
       className={`group flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-all duration-300 ${
         variant === "gradient"
           ? "gradient-bg-1 text-white shadow-sm hover:shadow-md hover:opacity-90 hover:scale-105"
@@ -37,6 +41,6 @@ export function CVDownloadButton({
       </div>
       Download CV
       <Download className="h-4 w-4 transition-all duration-300 group-hover:translate-y-1 group-hover:text-cyan-400" />
-    </Link>
+    </a>
   );
 }
